@@ -24,6 +24,12 @@
     <link rel="manifest" href="favicon/site.webmanifest" />
 
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&family=Montserrat:wght@900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -31,56 +37,34 @@
         <ul class="navbar">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
+          <li><a href="#cv">CV</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
-    <div class="side-main">
-      <aside>
-        <h3>Joonas F Koskinen</h3>
-        <p>"Insert here"</p>
-        <h3>Fun facts</h3>
-        <ul>
-          <li>"empty"</li>
-          <li>"empty"</li>
-          <li>"empty"</li>
-        </ul>
-      </aside>
-      <main>
-        <h1>Hi. I'm Joonas.</h1>
-        <h2 id="about">About me</h2>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo illo
-          vel aliquid perferendis ab nobis deserunt commodi itaque voluptatum
-          sunt laborum fuga, est cum temporibus. Maxime commodi quae quo ipsam?
-        </p>
-        <h2 id="skills">Skills</h2>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>React</li>
-          <li>Node.js</li>
-        </ul>
-        <h2 id="projects">Projects</h2>
-        <ul>
-          <li>
-            Project 1: Nemo illo vel aliquid perferendis ab nobis deserunt
-            commodi itaque voluptatum.
-          </li>
-          <li>
-            Project 2: Laborum fuga, est cum temporibus. Maxime commodi quae quo
-            ipsam.
-          </li>
-          <li>
-            Project 3: Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          </li>
-        </ul>
-      </main>
+    <section class="intro">
+      <div class="container">
+        <h1>&darr; PROJECTS &darr;</h1>
+      </div>
+    </section>
+    <div class="project--btn">
+      <button class="show-projectbtn">#1</button>
+      <button class="show-projectbtn">#2</button>
+      <button class="show-projectbtn">#3</button>
+      <button class="show-projectbtn">#4</button>
+      <button class="show-projectbtn">#5</button>
+      <button class="show-projectbtn">#6</button>
     </div>
+    <div class="projectbtn hidden">
+      <button class="close-projectbtn">&times;</button>
+      <h1>I'm a modal window 😍</h1>
+      <p></p>
+    </div>
+    <div class="overlay hidden"></div>
+
     <footer>
       <p>Copyright © 2023 My Portfolio</p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -1,9 +1,11 @@
-body {
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
+  box-sizing: inherit;
 }
 header {
   background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
   color: white;
   height: 50px;
   display: flex;
@@ -25,32 +27,53 @@ nav a {
   color: white;
   text-decoration: none;
 }
-.side-main {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 0;
-  padding: 0;
+body {
+  height: 125vh;
+  background: linear-gradient(to top left, #7a0dff, #b60dff);
 }
-aside,
-main {
-  border: 1px solid blue;
-}
-aside {
-  background-color: black;
-  color: white;
-  width: 200px;
-  padding: 20px;
-  justify-content: space-between;
-  flex-direction: column;
-}
-aside ul {
-  padding-top: 30%;
-  list-style-type: none;
+
+/* -------- Classes for the project section -------- */
+.container h1 {
+  font-family: 'Monoton', cursive;
+  font-size: 2.5rem;
+  width: 100%;
   text-align: center;
+  color: rgb(252, 121, 218);
+  text-shadow: 0 0 2px black, 0 0 5px black, 0 0 10px rgb(234, 38, 171),
+    0 0 10px rgb(234, 38, 171), 0 0 15px rgb(234, 38, 171),
+    0 0 20px rgb(234, 38, 171), 0 0 25px rgb(234, 38, 171);
+}
+.timeline {
+  border-right: #fff;
+}
+.project--btn {
+  display: grid;
+  gap: 3.5rem;
+  grid-auto-rows: minmax(100px, auto);
+  position: relative;
+}
+
+.show-projectbtn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border-width: 0;
+  color: rgb(234, 38, 171);
+  background-color: rgb(252, 121, 218);
+  font-size: 14px;
+  padding: 10px;
+  margin: 0 auto;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  position: relative;
+}
+.hidden {
+  display: none;
 }
 footer {
   background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
   color: white;
   height: 50px;
   display: flex;
