@@ -233,6 +233,7 @@ nav a {
 /* #btn6 {
   grid-area: 6 / 3 / 7 / 4;
 } */
+/* -------- For the closing -------- */
 .hidden {
   display: none;
 }
@@ -268,6 +269,10 @@ nav a {
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(3px);
   z-index: 5;
+}
+/* --------  Extra --------  */
+.projectbtn a {
+  text-decoration: none;
 }
 footer {
   background-color: black;

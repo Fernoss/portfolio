@@ -9,23 +9,39 @@ const btnsOpenProject = document.querySelectorAll('.show-projectbtn');
 const projectH1text = document.querySelector('.projectbtn h1');
 const projectPtext = document.querySelector('.projectbtn p');
 
+// Object for the window
+const projectContent = [
+  {
+    h1: 'Modal Window',
+    p: '👨🏻‍💻 Learning the basics of javaScript using DOM.',
+    url: 'https://fernoss.github.io/js-course/modal/',
+  },
+  {
+    h1: 'Guess My Number!',
+    p: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    url: 'https://fernoss.github.io/js-course/guess-my-number/',
+  },
+  {
+    h1: 'Pig Dice Game',
+    p: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    url: 'https://fernoss.github.io/js-course/pig-game/',
+  },
+  {
+    h1: 'Test Window 4',
+    p: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    url: '',
+  },
+  {
+    h1: 'Test Window 5',
+    p: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    url: '',
+  },
+];
+
 // Create open project function
 const openProject = function () {
   projectbtn.classList.remove('hidden');
   overlay.classList.remove('hidden');
-
-  const index = Array.from(btnsOpenProject).indexOf(this);
-
-  // Set the project window content based on the index
-  if (index < 3) {
-    projectH1text.textContent = `#${index + 1}, Test window 1`;
-    projectPtext.textContent =
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis velitesse non illo?';
-  } else {
-    projectH1text.textContent = `#${index + 1}, Test window 2`;
-    projectPtext.textContent =
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis velitesse non illo?';
-  }
 };
 
 // Create close project function
@@ -36,7 +52,20 @@ const closeProject = function () {
 
 // Create Event Listner for project buttons
 for (let i = 0; i < btnsOpenProject.length; i++) {
-  btnsOpenProject[i].addEventListener('click', openProject);
+  const content = projectContent[i];
+  btnsOpenProject[i].addEventListener('click', function () {
+    projectH1text.textContent = `#${i + 1}, ${content.h1}`;
+    projectPtext.textContent = content.p;
+    // to add an <a> for the URL and get a link for the project
+    if (content.url) {
+      const link = document.createElement('a');
+      link.href = content.url;
+      link.textContent = 'Click here for the project!';
+      link.target = '_blank';
+      projectPtext.appendChild(link);
+    }
+    openProject();
+  });
 }
 
 // Close button, 'Escape' and overlay
