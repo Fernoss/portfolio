@@ -1,24 +1,24 @@
 * {
   margin: 0;
-  padding: 0;
   box-sizing: inherit;
 }
+/* -------- Header and Nav -------- */
 header {
   background-color: black;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
   height: 50px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: center;
   padding: 10px;
 }
 .navbar {
   list-style: none;
-  margin-left: auto;
-  margin-right: 0;
-  padding-right: 0;
-  padding-left: auto;
+  margin: 0 auto;
   display: flex;
+  padding-left: 1rem;
+  gap: 10px;
 }
 nav li {
   margin-right: 20px;
@@ -27,12 +27,15 @@ nav a {
   color: white;
   text-decoration: none;
 }
+/* -------- Body -------- */
 body {
-  height: 125vh;
+  line-height: 1.5;
+  position: relative;
+  height: 110vh;
   background: linear-gradient(to top left, #7a0dff, #b60dff);
 }
 
-/* -------- Classes for the project section -------- */
+/* -------- Classes for the projects section -------- */
 .container h1 {
   font-family: 'Monoton', cursive;
   font-size: 2.5rem;
@@ -43,21 +46,16 @@ body {
     0 0 10px rgb(234, 38, 171), 0 0 15px rgb(234, 38, 171),
     0 0 20px rgb(234, 38, 171), 0 0 25px rgb(234, 38, 171);
 }
-.timeline {
-  border-right: #fff;
-}
 .project--btn {
   display: grid;
-  gap: 3.5rem;
-  grid-auto-rows: minmax(100px, auto);
-  position: relative;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-row-gap: 4rem;
 }
-
 .show-projectbtn {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  border-width: 0;
+  border-radius: 10rem;
+  border: none;
+  min-width: 10rem;
   color: rgb(234, 38, 171);
   background-color: rgb(252, 121, 218);
   font-size: 14px;
@@ -68,8 +66,59 @@ body {
   display: block;
   position: relative;
 }
+#btn1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+#btn2 {
+  grid-area: 2 / 3 / 3 / 4;
+}
+#btn3 {
+  grid-area: 3 / 1 / 4 / 2;
+}
+#btn4 {
+  grid-area: 4 / 3 / 5 / 4;
+}
+#btn5 {
+  grid-area: 5 / 1 / 6 / 2;
+}
+#btn6 {
+  grid-area: 6 / 3 / 7 / 4;
+}
 .hidden {
   display: none;
+}
+.projectbtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+
+  background-color: white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+.close-projectbtn {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
 }
 footer {
   background-color: black;
