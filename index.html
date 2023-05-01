@@ -21,6 +21,13 @@
       sizes="16x16"
       href="pictures/favicon/favicon-16x16.png"
     />
+    <!-- Fonts and css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Montserrat&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
     <link rel="manifest" href="favicon/site.webmanifest" />
 
     <link rel="stylesheet" type="text/css" href="style.css" />
@@ -30,7 +37,7 @@
       href="https://fonts.googleapis.com/css2?family=Monoton&family=Montserrat:wght@900&display=swap"
       rel="stylesheet"
     />
-  </head>
+  <!-- </head>
   <body>
     <header>
       <nav>
@@ -41,44 +48,77 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-    </header>
+    </header> -->
+
+    <!-- Intro -->
+    <div class="top-container">
+      <img class="top-cloud" src="./pictures/cloud1.png" alt="cloud-igm" />
+      <h1>I'm Joonas.</h1>
+      <h2 class="pro">a <span class="pro1">pro</span>grammer.</h2>
+      <img class="middle-cloud" src="./pictures/cloud1.png" alt="cloud-igm" />
+      <img class="bottom-cloud" src="./pictures/cloud3.png" alt="cloud-igm" />
+      <img class="mountain" src="./pictures/mountain1.png" alt="mountain-img" />
+    </div>
+
+    <!-- --------- Projects --------- -->
     <section class="intro">
       <div class="container">
         <h1>&darr; PROJECTS &darr;</h1>
       </div>
     </section>
+
     <div class="project--btn">
+      <!-- Window for the project -->
+      <div class="projectbtn hidden">
+        <button class="close-projectbtn">&times;</button>
+        <h1>** This is for the Test **</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa facere
+          esse placeat recusandae vel, omnis quibusdam laboriosam soluta amet
+          doloremque cum, nihil delectus illo nam! Est minus necessitatibus quae
+          velit!
+        </p>
+      </div>
+      <div class="overlay hidden"></div>
       <button class="show-projectbtn" id="btn1">
-        <span class="glowing-txt">Modal Window</span>
+        <span class="glowing-txt">Today <br />I <br />Learned</span>
       </button>
       <button class="show-projectbtn" id="btn2">
-        <span class="glowing-txt">Guess My Number</span>
+        <span class="glowing-txt">Modal Window</span>
       </button>
       <button class="show-projectbtn" id="btn3">
-        <span class="glowing-txt">Pig Game</span>
+        <span class="glowing-txt">Guess My Number</span>
       </button>
       <button class="show-projectbtn" id="btn4">
-        <span class="glowing-txt">Lorem ipsum</span>
+        <span class="glowing-txt">Pig Game</span>
       </button>
       <button class="show-projectbtn" id="btn5">
-        <span class="glowing-txt">Lorem ipsum</span>
+        <span class="glowing-txt"></span>
       </button>
       <!-- <button class="show-projectbtn" id="btn6">
         <span class="glowing-txt">Lorem ipsum</span>
       </button> -->
     </div>
-    <!-- Window for the project -->
-    <div class="projectbtn hidden">
-      <button class="close-projectbtn">&times;</button>
-      <h1>👨🏻‍💻</h1>
-      <p></p>
-    </div>
-    <!-- Overlay -->
-    <div class="overlay hidden"></div>
 
-    <!-- <footer>
-      <p>Copyright © 2023 My Portfolio</p>
-    </footer> -->
+    <!-- Something -->
+    <!-- <div class="bottom-container">
+      <a
+        class="footer-link"
+        href="https://www.linkedin.com/in/joonas-koskinen-416a50197/"
+        >LinkedIn</a
+      >
+      <p class="copyright">© Joonas Koskinen.</p>
+    </div> -->
+
+    <!-- Bottom section -->
+    <div class="top-container">
+      <img class="top-cloud" src="./pictures/cloud1.png" alt="cloud-igm" />
+      <h1>I'm Joonas.</h1>
+      <h2 class="pro">a <span class="pro1">pro</span>grammer.</h2>
+      <img class="middle-cloud" src="./pictures/cloud1.png" alt="cloud-igm" />
+      <img class="bottom-cloud" src="./pictures/cloud3.png" alt="cloud-igm" />
+      <img class="mountain" src="./pictures/mountain1.png" alt="mountain-img" />
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
