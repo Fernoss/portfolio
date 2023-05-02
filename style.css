@@ -19,8 +19,8 @@ body {
   background: linear-gradient(to top left, #7a0dff, #b60dff) no-repeat;
 }
 /* -------- Header and Nav -------- */
-header {
-  background-color: black;
+nav {
+  background-color: transparent;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
   height: 50px;
